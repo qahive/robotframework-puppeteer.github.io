@@ -1,0 +1,19 @@
+baseURL = "https://atthaboon.github.io/PG-hugo-io/"
+languageCode = "en-us"
+title = "Robot Framework Puppeteer | Easy, Stable and Speed web testing"
+theme = "timer-hugo"
+publishDir = "docs"
+canonifyURLs = true 
+
+# We Used Ionicons Icon font for Icon, for more details check this link - https://ionicons.com/
+
+# Site Params
+[params]
+home = "Home"
+logo = "images/logo.png"
+dateFormat = "6 January 2006"
+# Meta data
+description = "robotframework puppeteer automated web testing"
+author = "QA Hive Co.,Ltd"
+# Google Analitycs
+googleAnalitycsID = "Your ID"

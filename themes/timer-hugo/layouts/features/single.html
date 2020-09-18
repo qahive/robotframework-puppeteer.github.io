@@ -1,0 +1,59 @@
+{{ define "main" }}
+
+{{ "<!-- Page Header -->" | safeHTML }}
+<section id="details" class="details">
+    <div class="container">
+        
+        <div class="row global-page-header">
+            <div class="col-md-12">
+                <div class="block">
+                    <h2>{{ .Title }}</h2>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row content">
+            <div class="col-lg-8">
+                {{ with .Params.image }}
+                <div class="work-single-image">
+                    <!-- Work Single Image -->
+                    <img class="img-fluid w-100" src="{{ . | absURL }}" alt="work-single-image">
+                </div>
+                {{ end }}
+                <!-- work single Content -->
+                {{ with .Content }}
+                <div class="work-single-content">
+                    {{ . }}
+                </div>
+                {{ end }}
+            </div>
+            <div class="col-lg-4">
+                <!-- sidebar -->
+                <div class="work-single-sidebar">
+                    {{ with .Params.submitDate }}
+                    <h5>date</h5>
+                    <h6>{{ . }}</h6>
+                    {{ end }}
+                    <h5>category</h5>
+                    <h6>{{ delimit .Params.category ", " }}</h6>
+                    {{ with .Params.author }}
+                    <h5>author</h5>
+                    <h6>{{ . }}</h6>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ "<!-- Twitter Bootstrs CSS -->" | safeHTML }}
+{{ $stylemain := resources.Get "css/default-single.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $stylemain.Permalink }}" integrity="{{ $stylemain.Data.Integrity }}">
+
+<script>
+    window.fixedScrollMenu = 'features';
+</script>
+
+{{"<!-- work details part end -->" | safeHTML }}
+
+{{ end }}
