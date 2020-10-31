@@ -43,6 +43,22 @@
   padding-top: 10px !important;
 }
 
+#table-compatible {
+  min-width: 450px;
+  border: 1px solid #dfe2e5;
+}
+
+#table-compatible th {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+  background-color: #f6f8fa;
+}
+
+#table-compatible td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
